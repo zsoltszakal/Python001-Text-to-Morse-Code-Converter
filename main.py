@@ -46,15 +46,15 @@ morse_dict = {
   ")": "-.--.-"
 }
 
-string = input("Please enter string:\n")
+user_input = input("Write the text you want to convert to Morse code: :\n").lower()
 
 morse_code = []
 
-for char in string:
+for char in user_input:
     if char == " ":
         morse_code.append(" ")
     else:
-        new_char = morse_dict[char.lower()]
+        new_char = morse_dict[char]
         morse_code.append(new_char)
 
-print(morse_code)
+print(f"The morse code is {morse_code}")
